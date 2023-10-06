@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ModalViewController" customModule="ModalPresentation" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4T-7H-4U7">
+                    <rect key="frame" x="309" y="59" width="84" height="35"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Dismiss"/>
+                    <connections>
+                        <action selector="dismissDidTap:" destination="-1" eventType="touchUpInside" id="WeQ-I4-3zf"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bz-ZD-o1l">
+                    <rect key="frame" x="0.0" y="122" width="202" height="35"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Present with full screen"/>
+                    <connections>
+                        <action selector="fullScreenDidTap:" destination="-1" eventType="touchUpInside" id="mOg-Qb-VAT"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEj-1U-G0W">
+                    <rect key="frame" x="0.0" y="157" width="208" height="35"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Present with page sheet"/>
+                    <connections>
+                        <action selector="pageSheetDidTap:" destination="-1" eventType="touchUpInside" id="t61-xD-dKq"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgf-01-aol">
+                    <rect key="frame" x="0.0" y="192" width="231" height="35"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Present with overfullscreen"/>
+                    <connections>
+                        <action selector="overFullScreenDidTap:" destination="-1" eventType="touchUpInside" id="PDM-gn-eG8"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buW-qV-BPZ">
+                    <rect key="frame" x="0.0" y="227" width="201" height="35"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Present with Automatic"/>
+                    <connections>
+                        <action selector="automaticDidTap:" destination="-1" eventType="touchUpInside" id="B0G-Hu-v9a"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="R4T-7H-4U7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="5su-ES-0cv"/>
+                <constraint firstItem="4bz-ZD-o1l" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="63" id="97k-2Y-AhB"/>
+                <constraint firstItem="sgf-01-aol" firstAttribute="top" secondItem="fEj-1U-G0W" secondAttribute="bottom" id="BNi-Vl-91O"/>
+                <constraint firstItem="sgf-01-aol" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="EbN-Uz-BBx"/>
+                <constraint firstItem="buW-qV-BPZ" firstAttribute="top" secondItem="sgf-01-aol" secondAttribute="bottom" id="F3P-l8-hdQ"/>
+                <constraint firstItem="4bz-ZD-o1l" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Q3h-7s-8kl"/>
+                <constraint firstItem="buW-qV-BPZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="enk-Nc-8lh"/>
+                <constraint firstItem="fEj-1U-G0W" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="imD-HL-Q3A"/>
+                <constraint firstItem="fEj-1U-G0W" firstAttribute="top" secondItem="4bz-ZD-o1l" secondAttribute="bottom" id="mhY-rN-15Y"/>
+                <constraint firstItem="fEj-1U-G0W" firstAttribute="top" secondItem="4bz-ZD-o1l" secondAttribute="bottom" id="nHY-DE-jie"/>
+                <constraint firstItem="sgf-01-aol" firstAttribute="top" secondItem="fEj-1U-G0W" secondAttribute="bottom" id="tmj-2a-RHG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="R4T-7H-4U7" secondAttribute="trailing" id="zOg-Jc-lXU"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="20"/>
+        </view>
+    </objects>
+</document>

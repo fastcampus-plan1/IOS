@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ModalTransitionStyle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYg-wO-pO4">
+                                <rect key="frame" x="0.0" y="59" width="124" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="coverVertical"/>
+                                <connections>
+                                    <action selector="coverVertical:" destination="BYZ-38-t0r" eventType="touchUpInside" id="767-Pb-gaq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjc-ba-0Vh">
+                                <rect key="frame" x="0.0" y="94" width="126" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="flipHorizontal"/>
+                                <connections>
+                                    <action selector="flipHorizontal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aZR-5B-HrH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nE5-S6-IDh">
+                                <rect key="frame" x="0.0" y="129" width="129" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="crossDissolve"/>
+                                <connections>
+                                    <action selector="crossDissolve:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6eF-A6-Oet"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYy-VA-PJb">
+                                <rect key="frame" x="0.0" y="164" width="103" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="partialCurl"/>
+                                <connections>
+                                    <action selector="partialCurl:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2WH-4j-7NS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xjc-ba-0Vh" firstAttribute="top" secondItem="AYg-wO-pO4" secondAttribute="bottom" id="2XQ-NP-nBG"/>
+                            <constraint firstItem="AYg-wO-pO4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CHj-0B-VMM"/>
+                            <constraint firstItem="nE5-S6-IDh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NOM-On-Q7D"/>
+                            <constraint firstItem="AYy-VA-PJb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eUk-o0-Eys"/>
+                            <constraint firstItem="AYg-wO-pO4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="euc-uM-RJZ"/>
+                            <constraint firstItem="AYy-VA-PJb" firstAttribute="top" secondItem="nE5-S6-IDh" secondAttribute="bottom" id="woQ-iN-u7t"/>
+                            <constraint firstItem="xjc-ba-0Vh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="z4p-VO-qvc"/>
+                            <constraint firstItem="nE5-S6-IDh" firstAttribute="top" secondItem="xjc-ba-0Vh" secondAttribute="bottom" id="zZh-Cx-XRv"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
