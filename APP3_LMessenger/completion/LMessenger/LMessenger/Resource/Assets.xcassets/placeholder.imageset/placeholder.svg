@@ -1,0 +1,6 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="placeholder">
+<rect width="100" height="100" fill="#D9D9D9"/>
+<path id="Exclude" fill-rule="evenodd" clip-rule="evenodd" d="M30 33V70L38 62H67C67.8 62 68.5 61.7 69.1 61.1C69.7 60.5 70 59.8 70 59V33C70 32.2 69.7 31.5 69.1 30.9C68.5 30.3 67.8 30 67 30H33C32.2 30 31.5 30.3 30.9 30.9C30.3 31.5 30 32.2 30 33ZM43 37H46V49H56V52H46H43V49V37Z" fill="white"/>
+</g>
+</svg>
