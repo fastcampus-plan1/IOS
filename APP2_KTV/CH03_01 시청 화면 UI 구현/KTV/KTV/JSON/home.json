@@ -1,0 +1,127 @@
+{
+   "recommends":[
+      {
+         "playtime":90,
+         "title":"첫번째 추천",
+         "imageUrl":"http:\/\/localhost:8080\/image\/listthumb.png",
+         "videoId":1,
+         "channel":"추천 채널"
+      },
+      {
+         "playtime":70,
+         "title":"두번째 추천",
+         "imageUrl":"http:\/\/localhost:8080\/image\/listthumb.png",
+         "videoId":2,
+         "channel":"추천 채널"
+      },
+      {
+         "playtime":100,
+         "title":"세번째 추천",
+         "imageUrl":"http:\/\/localhost:8080\/image\/listthumb.png",
+         "videoId":3,
+         "channel":"추천 채널"
+      },
+      {
+         "playtime":90,
+         "title":"네번째 추천",
+         "imageUrl":"http:\/\/localhost:8080\/image\/listthumb.png",
+         "videoId":4,
+         "channel":"추천 채널"
+      },
+      {
+         "playtime":30,
+         "title":"다섯번째 추천",
+         "imageUrl":"http:\/\/localhost:8080\/image\/listthumb.png",
+         "videoId":5,
+         "channel":"추천 채널"
+      },
+      {
+         "playtime":40,
+         "title":"여섯번째 추천",
+         "imageUrl":"http:\/\/localhost:8080\/image\/listthumb.png",
+         "videoId":6,
+         "channel":"추천 채널"
+      },
+      {
+         "playtime":60,
+         "title":"일곱번째 추천",
+         "imageUrl":"http:\/\/localhost:8080\/image\/listthumb.png",
+         "videoId":7,
+         "channel":"추천 채널"
+      },
+      {
+         "playtime":40,
+         "title":"여덟번째 추천",
+         "imageUrl":"http:\/\/localhost:8080\/image\/listthumb.png",
+         "videoId":8,
+         "channel":"추천 채널"
+      },
+      {
+         "playtime":60,
+         "title":"아홉번째 추천",
+         "imageUrl":"http:\/\/localhost:8080\/image\/listthumb.png",
+         "videoId":9,
+         "channel":"추천 채널"
+      }
+   ],
+   "rankings":[
+      {
+         "videoId":3,
+         "imageUrl":"http:\/\/localhost:8080\/image\/rankingthumbnail.png"
+      },
+      {
+         "videoId":4,
+         "imageUrl":"http:\/\/localhost:8080\/image\/rankingthumbnail.png"
+      },
+      {
+         "videoId":5,
+         "imageUrl":"http:\/\/localhost:8080\/image\/rankingthumbnail.png"
+      },
+      {
+         "videoId":6,
+         "imageUrl":"http:\/\/localhost:8080\/image\/rankingthumbnail.png"
+      },
+      {
+         "videoId":7,
+         "imageUrl":"http:\/\/localhost:8080\/image\/rankingthumbnail.png"
+      }
+   ],
+   "recents":[
+      {
+         "timeStamp":1694335224.0776711,
+         "title":"첫번째 동영상",
+         "imageUrl":"http:\/\/localhost:8080\/image\/v_thumbnail2.png",
+         "videoId":1,
+         "channel":"첫번째 채널"
+      },
+      {
+         "timeStamp":1694335224.0776811,
+         "title":"두번째 동영상",
+         "imageUrl":"http:\/\/localhost:8080\/image\/v_thumbnail2.png",
+         "videoId":1,
+         "channel":"두번째 채널"
+      }
+   ],
+   "videos":[
+      {
+         "channel":"첫번째 채널",
+         "subtitle":"첫번째 부제목",
+         "isHot":true,
+         "title":"첫번째 동영상",
+         "channelThumbnailURL":"http:\/\/localhost:8080\/image\/user.png",
+         "imageUrl":"http:\/\/localhost:8080\/image\/v_thumbnail3.png",
+         "videoId":1,
+         "channelDescription":"이런저런 채널"
+      },
+      {
+         "channel":"첫번째 채널",
+         "subtitle":"두번째 부제목",
+         "isHot":false,
+         "title":"두번째 동영상",
+         "channelThumbnailURL":"http:\/\/localhost:8080\/image\/user.png",
+         "imageUrl":"http:\/\/localhost:8080\/image\/v_thumbnail1.png",
+         "videoId":2,
+         "channelDescription":"이런저런 채널"
+      }
+   ]
+}

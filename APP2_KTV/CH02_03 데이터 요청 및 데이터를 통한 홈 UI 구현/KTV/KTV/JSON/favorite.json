@@ -1,0 +1,58 @@
+{
+   "list":[
+      {
+         "playtime":90,
+         "title":"첫번째 좋아요 한 영상",
+         "imageUrl":"http:\/\/localhost:8080\/image\/listthumb.png",
+         "channel":"좋아요 채널 1"
+      },
+      {
+         "playtime":70,
+         "title":"두번째 좋아요 한 영상",
+         "imageUrl":"http:\/\/localhost:8080\/image\/listthumb.png",
+         "channel":"좋아요 채널 2"
+      },
+      {
+         "playtime":100,
+         "title":"세번째 좋아요 한 영상",
+         "imageUrl":"http:\/\/localhost:8080\/image\/listthumb.png",
+         "channel":"좋아요 채널 3"
+      },
+      {
+         "playtime":90,
+         "title":"네번째 좋아요 한 영상",
+         "imageUrl":"http:\/\/localhost:8080\/image\/listthumb.png",
+         "channel":"좋아요 채널 4"
+      },
+      {
+         "playtime":30,
+         "title":"다섯번째 좋아요 한 영상",
+         "imageUrl":"http:\/\/localhost:8080\/image\/listthumb.png",
+         "channel":"좋아요 채널 5"
+      },
+      {
+         "playtime":40,
+         "title":"여섯번째 좋아요 한 영상",
+         "imageUrl":"http:\/\/localhost:8080\/image\/listthumb.png",
+         "channel":"좋아요 채널 6"
+      },
+      {
+         "playtime":60,
+         "title":"일곱번째 좋아요 한 영상",
+         "imageUrl":"http:\/\/localhost:8080\/image\/listthumb.png",
+         "channel":"좋아요 채널 7"
+      },
+      {
+         "playtime":40,
+         "title":"여덟번째 좋아요 한 영상",
+         "imageUrl":"http:\/\/localhost:8080\/image\/listthumb.png",
+         "channel":"좋아요 채널 8"
+      },
+      {
+         "playtime":60,
+         "title":"아홉번째 좋아요 한 영상",
+         "imageUrl":"http:\/\/localhost:8080\/image\/listthumb.png",
+         "channel":"좋아요 채널 9"
+      }
+   ]
+}

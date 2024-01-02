@@ -1,0 +1,19 @@
+{
+   "channels":[
+      {
+         "channel":"채널1",
+         "channelId":1,
+         "thumbnail":"http:\/\/localhost:8080\/image\/user.png"
+      },
+      {
+         "channel":"채널1",
+         "channelId":2,
+         "thumbnail":"http:\/\/localhost:8080\/image\/user.png"
+      },
+      {
+         "channel":"채널2",
+         "channelId":3,
+         "thumbnail":"http:\/\/localhost:8080\/image\/user.png"
+      }
+   ]
+}

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="KTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MyU-qx-Onw">
+                                <rect key="frame" x="96.666666666666686" y="526.66666666666663" width="200" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="W4V-jc-Ucs"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="a5g-Jb-9dp"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="로그인">
+                                    <color key="titleColor" name="main-brown"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rr6-le-ZSe"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchImage" translatesAutoresizingMaskIntoConstraints="NO" id="zC4-cd-SFw">
+                                <rect key="frame" x="146.66666666666666" y="388.66666666666669" width="100" height="100"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="main-yellow"/>
+                        <constraints>
+                            <constraint firstItem="MyU-qx-Onw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GrS-Js-QYR"/>
+                            <constraint firstItem="zC4-cd-SFw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Mml-Fs-WNd"/>
+                            <constraint firstItem="zC4-cd-SFw" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="XCp-rT-K2u"/>
+                            <constraint firstItem="MyU-qx-Onw" firstAttribute="top" secondItem="zC4-cd-SFw" secondAttribute="bottom" constant="37.999999999999943" id="gJp-xF-B4a"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="MyU-qx-Onw" id="kar-xT-XK1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48" y="-2"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lDa-bJ-LPP">
+            <objects>
+                <viewController id="82c-RO-0br" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sbx-01-Un4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ai3-fM-EVM"/>
+                        <color key="backgroundColor" name="bg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="tabIcon_live" selectedImage="tabIcon_live_selected" id="zN9-9b-v6M"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F0N-WM-4do" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1636" y="-14"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="g6O-yc-Kbk">
+            <objects>
+                <viewController id="Fak-vP-o1h" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xcm-Lb-di4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="uoR-L8-y4S"/>
+                        <color key="backgroundColor" name="bg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="tabIcon_my" selectedImage="tabIcon_my_selected" id="Jjm-AL-EPb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TzB-SD-FyK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1656" y="680"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="c2X-Il-FNd">
+            <objects>
+                <viewController id="w7F-DD-kh2" customClass="HomeViewController" customModule="KTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bf0-Nc-WcZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="30h-tB-V7h">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" name="bg"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ovx-Ra-6BG">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="d4Q-ji-XH6">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="H3o-pK-yhU">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3pl-Oq-5EW"/>
+                        <color key="backgroundColor" name="bg"/>
+                        <constraints>
+                            <constraint firstItem="30h-tB-V7h" firstAttribute="leading" secondItem="3pl-Oq-5EW" secondAttribute="leading" id="2aI-GY-UZ0"/>
+                            <constraint firstItem="30h-tB-V7h" firstAttribute="top" secondItem="3pl-Oq-5EW" secondAttribute="top" id="3Ao-eT-uhb"/>
+                            <constraint firstItem="3pl-Oq-5EW" firstAttribute="trailing" secondItem="30h-tB-V7h" secondAttribute="trailing" id="DCS-O2-Ps3"/>
+                            <constraint firstItem="3pl-Oq-5EW" firstAttribute="bottom" secondItem="30h-tB-V7h" secondAttribute="bottom" id="Fl5-WD-i7U"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="tabIcon_home" selectedImage="tabIcon_home_selected" id="Zrj-33-BAY"/>
+                    <connections>
+                        <outlet property="collectionView" destination="30h-tB-V7h" id="dpX-Rn-rhC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4S8-v3-9ig" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1656" y="-673"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="uJ1-fO-pyi">
+            <objects>
+                <tabBarController storyboardIdentifier="tabbar" id="Y0j-hL-DI9" customClass="TabBarController" customModule="KTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="pCj-DX-jqs">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" name="more-bk"/>
+                            <color key="shadowColor" name="stroke-light"/>
+                        </tabBarAppearance>
+                        <tabBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" name="more-bk"/>
+                            <color key="shadowColor" name="stroke-light"/>
+                        </tabBarAppearance>
+                    </tabBar>
+                    <connections>
+                        <segue destination="w7F-DD-kh2" kind="relationship" relationship="viewControllers" id="Uh4-uR-cDv"/>
+                        <segue destination="82c-RO-0br" kind="relationship" relationship="viewControllers" id="UmT-bq-MbM"/>
+                        <segue destination="Fak-vP-o1h" kind="relationship" relationship="viewControllers" id="mnP-hW-qig"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cfu-Ez-NSL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="866" y="-263"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="launchImage" width="100" height="100"/>
+        <image name="tabIcon_home" width="28" height="28"/>
+        <image name="tabIcon_home_selected" width="28" height="28"/>
+        <image name="tabIcon_live" width="80" height="28"/>
+        <image name="tabIcon_live_selected" width="80" height="28"/>
+        <image name="tabIcon_my" width="28" height="28"/>
+        <image name="tabIcon_my_selected" width="29" height="28"/>
+        <namedColor name="bg">
+            <color red="0.10588235294117647" green="0.10588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="main-brown">
+            <color red="0.27843137254901962" green="0.12941176470588237" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="main-yellow">
+            <color red="0.99215686274509807" green="0.89411764705882357" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="more-bk">
+            <color red="0.078431372549019607" green="0.078431372549019607" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="stroke-light">
+            <color red="0.34509803921568627" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

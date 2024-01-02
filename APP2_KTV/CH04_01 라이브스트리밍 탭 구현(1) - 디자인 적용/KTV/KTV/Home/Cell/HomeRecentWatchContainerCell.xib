@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xCO-kO-Fez" customClass="HomeRecentWatchContainerCell" customModule="KTV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="278" height="189"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wWt-GA-Y2z">
+                <rect key="frame" x="0.0" y="0.0" width="278" height="189"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFE-cE-MrK">
+                        <rect key="frame" x="0.0" y="0.0" width="278" height="189"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0lZ-95-wNQ">
+                                <rect key="frame" x="0.0" y="0.0" width="278" height="189"/>
+                                <color key="backgroundColor" name="bk-origin"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KNc-TV-A76">
+                                    <size key="itemSize" width="84" height="148"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="33" minY="26" maxX="33" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" name="bg"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="0lZ-95-wNQ" secondAttribute="bottom" id="JEO-eR-F1A"/>
+                            <constraint firstItem="0lZ-95-wNQ" firstAttribute="leading" secondItem="gFE-cE-MrK" secondAttribute="leading" id="Vx9-Uy-ELq"/>
+                            <constraint firstItem="0lZ-95-wNQ" firstAttribute="top" secondItem="gFE-cE-MrK" secondAttribute="top" id="exu-be-ewv"/>
+                            <constraint firstAttribute="trailing" secondItem="0lZ-95-wNQ" secondAttribute="trailing" id="vLK-oT-cmW"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="gFE-cE-MrK" secondAttribute="bottom" id="4Kd-Wh-sa8"/>
+                    <constraint firstItem="gFE-cE-MrK" firstAttribute="leading" secondItem="wWt-GA-Y2z" secondAttribute="leading" id="REq-G2-fdM"/>
+                    <constraint firstItem="gFE-cE-MrK" firstAttribute="top" secondItem="wWt-GA-Y2z" secondAttribute="top" id="SNk-nA-14x"/>
+                    <constraint firstAttribute="trailing" secondItem="gFE-cE-MrK" secondAttribute="trailing" id="mkY-Vw-0fF"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <connections>
+                <outlet property="collectionView" destination="0lZ-95-wNQ" id="fbU-n1-oBu"/>
+            </connections>
+            <point key="canvasLocation" x="625" y="10"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="bg">
+            <color red="0.10588235294117647" green="0.10588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="bk-origin">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

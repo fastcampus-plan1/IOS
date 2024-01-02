@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="IQW-lr-OQz" customClass="HomeRecommendContainerCell" customModule="KTV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="495"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LKu-WY-Q0C">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="495"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oeK-kX-ka0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="495"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="추천" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5WC-lT-lKb">
+                                <rect key="frame" x="14" y="24" width="292" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" name="main-wh"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ocJ-e0-npn">
+                                <rect key="frame" x="26" y="78" width="268" height="372"/>
+                                <color key="backgroundColor" name="bk-origin"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dj-do-rzU">
+                                <rect key="frame" x="0.0" y="450" width="320" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="9LH-57-qjA"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="unfold"/>
+                                <connections>
+                                    <action selector="foldButtonDidTap:" destination="IQW-lr-OQz" eventType="touchUpInside" id="EAh-7Q-ojm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="bk-origin"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="6dj-do-rzU" secondAttribute="bottom" constant="17" id="0Se-kj-y57"/>
+                            <constraint firstItem="6dj-do-rzU" firstAttribute="leading" secondItem="oeK-kX-ka0" secondAttribute="leading" id="9aC-wa-TJB"/>
+                            <constraint firstAttribute="trailing" secondItem="6dj-do-rzU" secondAttribute="trailing" id="H9n-5g-DYw"/>
+                            <constraint firstAttribute="trailing" secondItem="ocJ-e0-npn" secondAttribute="trailing" constant="26" id="MOG-Qm-vVD"/>
+                            <constraint firstItem="ocJ-e0-npn" firstAttribute="leading" secondItem="oeK-kX-ka0" secondAttribute="leading" constant="26" id="Wlz-Nb-Mff"/>
+                            <constraint firstItem="5WC-lT-lKb" firstAttribute="top" secondItem="oeK-kX-ka0" secondAttribute="top" constant="24" id="ZQm-3V-Kff"/>
+                            <constraint firstItem="ocJ-e0-npn" firstAttribute="top" secondItem="5WC-lT-lKb" secondAttribute="bottom" constant="33" id="cl9-DL-9TW"/>
+                            <constraint firstAttribute="trailing" secondItem="5WC-lT-lKb" secondAttribute="trailing" constant="14" id="jMo-8X-KeN"/>
+                            <constraint firstItem="6dj-do-rzU" firstAttribute="top" secondItem="ocJ-e0-npn" secondAttribute="bottom" id="sLY-Yo-pub"/>
+                            <constraint firstItem="5WC-lT-lKb" firstAttribute="leading" secondItem="oeK-kX-ka0" secondAttribute="leading" constant="14" id="snA-6E-UX2"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="oeK-kX-ka0" secondAttribute="trailing" id="3yy-lu-s1Q"/>
+                    <constraint firstItem="oeK-kX-ka0" firstAttribute="leading" secondItem="LKu-WY-Q0C" secondAttribute="leading" id="Hgq-R9-ybb"/>
+                    <constraint firstAttribute="bottom" secondItem="oeK-kX-ka0" secondAttribute="bottom" id="cNi-Rc-0Sp"/>
+                    <constraint firstItem="oeK-kX-ka0" firstAttribute="top" secondItem="LKu-WY-Q0C" secondAttribute="top" id="zj1-MT-25D"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <connections>
+                <outlet property="containerView" destination="oeK-kX-ka0" id="R9O-bX-DF1"/>
+                <outlet property="foldButton" destination="6dj-do-rzU" id="9GM-5T-pyR"/>
+                <outlet property="tableView" destination="ocJ-e0-npn" id="wOK-K7-h05"/>
+            </connections>
+            <point key="canvasLocation" x="-478" y="12"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="unfold" width="24" height="13.666666984558105"/>
+        <namedColor name="bk-origin">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="main-wh">
+            <color red="0.99607843137254903" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

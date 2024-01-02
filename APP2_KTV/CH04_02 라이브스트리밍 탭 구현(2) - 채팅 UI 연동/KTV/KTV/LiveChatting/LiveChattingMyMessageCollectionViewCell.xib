@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="LiveChattingMyMessageCollectionViewCell" customModule="StreamingSample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="447" height="61"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="447" height="61"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XrC-Zi-mQW">
+                        <rect key="frame" x="394.66666666666669" y="0.0" width="52.333333333333314" height="56"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySC-Vv-vlD">
+                                <rect key="frame" x="10" y="4" width="32.333333333333336" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="main-yellow"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ySC-Vv-vlD" secondAttribute="trailing" constant="10" id="Dxv-LW-Snn"/>
+                            <constraint firstItem="ySC-Vv-vlD" firstAttribute="top" secondItem="XrC-Zi-mQW" secondAttribute="top" constant="4" id="XPR-eq-UcF"/>
+                            <constraint firstItem="ySC-Vv-vlD" firstAttribute="leading" secondItem="XrC-Zi-mQW" secondAttribute="leading" constant="10" id="ax4-W6-N1U"/>
+                            <constraint firstAttribute="bottom" secondItem="ySC-Vv-vlD" secondAttribute="bottom" constant="4" id="sG0-TG-O6m"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="XrC-Zi-mQW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Bbm-XR-ogp"/>
+                <constraint firstAttribute="trailing" secondItem="XrC-Zi-mQW" secondAttribute="trailing" id="Hgq-ht-TAP"/>
+                <constraint firstAttribute="bottom" secondItem="XrC-Zi-mQW" secondAttribute="bottom" constant="5" id="e0o-o1-xpx"/>
+                <constraint firstItem="XrC-Zi-mQW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="leading" id="whV-U0-5hx"/>
+            </constraints>
+            <size key="customSize" width="447" height="61"/>
+            <connections>
+                <outlet property="bgView" destination="XrC-Zi-mQW" id="SdX-nf-lm6"/>
+                <outlet property="textLabel" destination="ySC-Vv-vlD" id="G51-Q6-SUg"/>
+            </connections>
+            <point key="canvasLocation" x="441.98473282442745" y="23.591549295774648"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="main-yellow">
+            <color red="0.99215686274509807" green="0.89411764705882357" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
