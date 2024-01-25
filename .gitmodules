@@ -4,3 +4,6 @@
 [submodule "apply_pattern"]
 	path = apply_pattern
 	url = https://github.com/MBKwon/apply_pattern.git
+[submodule "부록2_Opensources"]
+	path = 부록2_Opensources
+	url = https://github.com/x-0o0/package-boxoffices.git
