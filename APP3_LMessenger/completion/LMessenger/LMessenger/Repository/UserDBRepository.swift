@@ -30,8 +30,9 @@ class UserDBRepository: UserDBRepositoryType {
         Just(object)
             .compactMap { try? JSONEncoder().encode($0) }
             .compactMap { try? JSONSerialization.jsonObject(with: $0, options: .fragmentsAllowed) }
-            .flatMap { value in
-                self.reference.setValue(key: DBKey.Users, path: object.id, value: value)
+            .flatMap { [weak self] value -> AnyPublisher<Void, DBError> in
+                guard let `self` = self else { return Empty().eraseToAnyPublisher() }
+                return self.reference.setValue(key: DBKey.Users, path: object.id, value: value)
             }
             .eraseToAnyPublisher()
     }
@@ -52,8 +53,9 @@ class UserDBRepository: UserDBRepositoryType {
                     return nil
                 }
             }
-            .flatMap { origin, converted in
-                self.reference.setValue(key: DBKey.Users, path: origin.id, value: converted)
+            .flatMap { [weak self] origin, converted -> AnyPublisher<Void, DBError> in
+                guard let `self` = self else { return Empty().eraseToAnyPublisher() }
+                return self.reference.setValue(key: DBKey.Users, path: origin.id, value: converted)
             }
             .last()
             .eraseToAnyPublisher()

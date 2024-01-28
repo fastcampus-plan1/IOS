@@ -42,8 +42,9 @@ class ChatRoomDBRepository: ChatRoomDBRepositoryType {
         Just(object)
             .compactMap { try? JSONEncoder().encode($0) }
             .compactMap { try? JSONSerialization.jsonObject(with: $0, options: .fragmentsAllowed) }
-            .flatMap { value in
-                self.reference.setValue(key: DBKey.ChatRooms, path: "\(myUserId)/\(object.otherUseId)", value: value)
+            .flatMap { [weak self] value -> AnyPublisher<Void, DBError> in
+                guard let `self` = self else { return Empty().eraseToAnyPublisher() }
+                return self.reference.setValue(key: DBKey.ChatRooms, path: "\(myUserId)/\(object.otherUseId)", value: value)
             }
             .eraseToAnyPublisher()
     }

@@ -50,8 +50,9 @@ class AuthenticationViewModel: ObservableObject {
             isLoading = true
             
             container.services.authService.signInWithGoogle()
-                .flatMap { user in
-                    self.container.services.userService.addUser(user)
+                .flatMap { [weak self] user -> AnyPublisher<User, ServiceError> in
+                    guard let `self` = self else { return Empty().eraseToAnyPublisher() }
+                    return self.container.services.userService.addUser(user)
                 }
                 .sink { [weak self] completion in
                     if case .failure = completion {
@@ -72,8 +73,9 @@ class AuthenticationViewModel: ObservableObject {
                 guard let nonce = currentNonce else { return }
                 
                 container.services.authService.handleSignInWithAppleCompletion(authorization, none: nonce)
-                    .flatMap { user in
-                        self.container.services.userService.addUser(user)
+                    .flatMap { [weak self] user -> AnyPublisher<User, ServiceError> in
+                        guard let `self` = self else { return Empty().eraseToAnyPublisher() }
+                        return self.container.services.userService.addUser(user)
                     }
                     .sink { [weak self] completion in
                         if case .failure = completion {
@@ -99,8 +101,8 @@ class AuthenticationViewModel: ObservableObject {
         case .setPushToken:
             container.services.pushNotificationService.fcmToken
                 .compactMap { $0 }
-                .flatMap { fcmToken -> AnyPublisher<Void, Never> in
-                    guard let userId = self.userId else { return Empty().eraseToAnyPublisher() }
+                .flatMap { [weak self] fcmToken -> AnyPublisher<Void, Never> in
+                    guard let `self` = self, let userId = self.userId else { return Empty().eraseToAnyPublisher() }
                     return self.container.services.userService.updateFCMToken(userId: userId, fcmToken: fcmToken)
                         .replaceError(with: ())
                         .eraseToAnyPublisher()

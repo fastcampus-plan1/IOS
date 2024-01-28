@@ -40,8 +40,9 @@ class HomeViewModel: ObservableObject {
                 .handleEvents(receiveOutput: { [weak self] user in
                     self?.myUser = user
                 })
-                .flatMap { user in
-                    self.container.services.userService.loadUsers(id: user.id)
+                .flatMap { [weak self] user -> AnyPublisher<[User], ServiceError> in
+                    guard let `self` = self else { return Empty().eraseToAnyPublisher() }
+                    return self.container.services.userService.loadUsers(id: user.id)
                 }
                 .sink { [weak self] completion in
                     if case .failure = completion {
@@ -54,11 +55,13 @@ class HomeViewModel: ObservableObject {
             
         case .requestContacts:
             container.services.contactService.fetchContacts()
-                .flatMap { users in
-                    self.container.services.userService.addUserAfterContact(users: users)
+                .flatMap { [weak self] users -> AnyPublisher<Void, ServiceError> in
+                    guard let `self` = self else { return Empty().eraseToAnyPublisher() }
+                    return self.container.services.userService.addUserAfterContact(users: users)
                 }
-                .flatMap { _ in
-                    self.container.services.userService.loadUsers(id: self.userId)
+                .flatMap { [weak self] _ -> AnyPublisher<[User], ServiceError> in
+                    guard let `self` = self else { return Empty().eraseToAnyPublisher() }
+                    return self.container.services.userService.loadUsers(id: self.userId)
                 }
                 .receive(on: DispatchQueue.main)
                 .sink { completion in

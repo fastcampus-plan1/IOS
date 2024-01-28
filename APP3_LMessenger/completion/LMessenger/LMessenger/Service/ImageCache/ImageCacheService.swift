@@ -23,7 +23,9 @@ class ImageCacheService: ImageCacheServiceType {
     
     func image(for key: String) -> AnyPublisher<UIImage?, Never> {
         imageWithMemoryCache(for: key)
-            .flatMap { image -> AnyPublisher<UIImage?, Never> in
+            .flatMap { [weak self] image -> AnyPublisher<UIImage?, Never> in
+                guard let `self` = self else { return Empty().eraseToAnyPublisher() }
+                
                 if let image {
                     return Just(image).eraseToAnyPublisher()
                 } else {
@@ -49,7 +51,9 @@ class ImageCacheService: ImageCacheServiceType {
                 promise(.success(nil))
             }
         }
-        .flatMap { image -> AnyPublisher<UIImage?, Never> in
+        .flatMap { [weak self] image -> AnyPublisher<UIImage?, Never> in
+            guard let `self` = self else { return Empty().eraseToAnyPublisher() }
+            
             if let image {
                 return Just(image)
                     .handleEvents(receiveOutput: { [weak self] image in

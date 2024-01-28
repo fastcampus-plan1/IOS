@@ -82,15 +82,17 @@ class ChatViewModel: ObservableObject {
             let chat: Chat = .init(chatId: UUID().uuidString, userId: myUserId, message: message, date: Date())
             
             container.services.chatService.addChat(chat, to: chatRoomId)
-                .flatMap { chat in
-                    self.container.services.chatRoomService.updateChatRoomLastMessage(chatRoomId: self.chatRoomId,
-                                                                                      myUserId: self.myUserId,
-                                                                                      myUserName: self.myUser?.name ?? "",
-                                                                                      otherUserId: self.otherUserId,
-                                                                                      lastMessage: chat.lastMessage)
+                .flatMap { [weak self] chat -> AnyPublisher<Void, ServiceError> in
+                    guard let `self` = self else { return Empty().eraseToAnyPublisher() }
+                    return self.container.services.chatRoomService.updateChatRoomLastMessage(chatRoomId: self.chatRoomId,
+                                                                                             myUserId: self.myUserId,
+                                                                                             myUserName: self.myUser?.name ?? "",
+                                                                                             otherUserId: self.otherUserId,
+                                                                                             lastMessage: chat.lastMessage)
                 }
-                .flatMap { _ -> AnyPublisher<Bool, Never> in
-                    guard let fcmToken = self.otherUser?.fcmToken else { return Just(false).eraseToAnyPublisher() }
+                .flatMap { [weak self] _ -> AnyPublisher<Bool, Never> in
+                    guard let `self` = self,
+                          let fcmToken = self.otherUser?.fcmToken else { return Just(false).eraseToAnyPublisher() }
                     return self.container.services.pushNotificationService.sendPushNotification(fcmToken: fcmToken, message: message)
                 }
                 .sink { completion in
@@ -102,22 +104,26 @@ class ChatViewModel: ObservableObject {
             guard let pickerItem else { return }
             
             container.services.photoPickerService.loadTransferable(from: pickerItem)
-                .flatMap { data in
-                    self.container.services.uploadService.uploadImage(source: .chat(chatRoomId: self.chatRoomId), data: data)
+                .flatMap { [weak self] data -> AnyPublisher<URL, ServiceError> in
+                    guard let `self` = self else { return Empty().eraseToAnyPublisher() }
+                    return self.container.services.uploadService.uploadImage(source: .chat(chatRoomId: self.chatRoomId), data: data)
                 }
-                .flatMap { url in
+                .flatMap { [weak self] url -> AnyPublisher<Chat, ServiceError> in
+                    guard let `self` = self else { return Empty().eraseToAnyPublisher() }
                     let chat: Chat = .init(chatId: UUID().uuidString, userId: self.myUserId, photoURL: url.absoluteString, date: Date())
                     return self.container.services.chatService.addChat(chat, to: self.chatRoomId)
                 }
-                .flatMap { chat in
-                    self.container.services.chatRoomService.updateChatRoomLastMessage(chatRoomId: self.chatRoomId,
-                                                                                      myUserId: self.myUserId,
-                                                                                      myUserName: self.myUser?.name ?? "",
-                                                                                      otherUserId: self.otherUserId,
-                                                                                      lastMessage: chat.lastMessage)
+                .flatMap { [weak self] chat -> AnyPublisher<Void, ServiceError> in
+                    guard let `self` = self else { return Empty().eraseToAnyPublisher() }
+                    return self.container.services.chatRoomService.updateChatRoomLastMessage(chatRoomId: self.chatRoomId,
+                                                                                             myUserId: self.myUserId,
+                                                                                             myUserName: self.myUser?.name ?? "",
+                                                                                             otherUserId: self.otherUserId,
+                                                                                             lastMessage: chat.lastMessage)
                 }
-                .flatMap { _ -> AnyPublisher<Bool, Never> in
-                    guard let fcmToken = self.otherUser?.fcmToken else { return Empty().eraseToAnyPublisher() }
+                .flatMap { [weak self] _ -> AnyPublisher<Bool, Never> in
+                    guard let `self` = self,
+                          let fcmToken = self.otherUser?.fcmToken else { return Empty().eraseToAnyPublisher() }
                     return self.container.services.pushNotificationService.sendPushNotification(fcmToken: fcmToken, message: "사진")
                 }
                 .sink { completion in

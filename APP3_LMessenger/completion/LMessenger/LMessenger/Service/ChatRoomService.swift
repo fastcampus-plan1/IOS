@@ -24,7 +24,9 @@ class ChatRoomService: ChatRoomServiceType {
     func createChatRoomIfNeeded(myUserId: String, otherUserId: String, otherUserName: String) -> AnyPublisher<ChatRoom, ServiceError> {
         dbRepository.getChatRoom(myUserId: myUserId, otherUserId: otherUserId)
             .mapError { ServiceError.error($0) }
-            .flatMap { object in
+            .flatMap { [weak self] object -> AnyPublisher<ChatRoom, ServiceError> in
+                guard let `self` = self else { return Empty().eraseToAnyPublisher() }
+                
                 if let object {
                     return Just(object.toModel()).setFailureType(to: ServiceError.self).eraseToAnyPublisher()
                 } else {
